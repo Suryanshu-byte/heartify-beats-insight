@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const CTA = () => {
+  const navigate = useNavigate();
+  
   const features = [
     "30-day free trial",
     "No setup fees",
@@ -37,6 +40,7 @@ const CTA = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-primary text-white hover:opacity-90 transition-all duration-300 hover:scale-105 shadow-lg"
+                onClick={() => navigate("/heart-analysis")}
               >
                 Start Your Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
